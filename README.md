@@ -15,8 +15,8 @@ The Green Cool Fox plugin enhances your browsing experience by providing essenti
 3. **Data Storage Detection**
    - The plugin identifies and notifies you about data storage on your device, specifically focusing on local storage using HTML5 technology. This helps you stay aware of the information stored by websites.
 
-4. **Cookies and Supercookies**
-   - The plugin provides information about the number and types of cookies and supercookies injected when loading a page. It differentiates between first-party and third-party cookies, as well as session and navigation cookies, providing you with insights into the tracking mechanisms employed by websites.
+4. **Cookies**
+   - The plugin provides information about the number and types of cookies injected when loading a page. It differentiates between first-party and third-party cookies, as well as session and navigation cookies, providing you with insights into the tracking mechanisms employed by websites.
 
 ## Scripts
 
@@ -29,11 +29,11 @@ The Green Cool Fox plugin enhances your browsing experience by providing essenti
 
 2. **Potential Browser Hijacking Threats**
     - Retrieves the current hostname of the web page.
-    - Iterates through all anchor tags (<a>) in the document.
+    - Iterates through all anchor tags (`<a>`) in the document.
     - Checks the href attribute of each anchor tag and extracts the URL.
     - Compares the hostname of the extracted URL with the current hostname.
     - If the hostname differs and is not already present in the list of hijacking threats, it is added to the list.
-    - Iterates through all script tags (<script>) in the document.
+    - Iterates through all script tags (`<script>`) in the document.
     - Checks the src attribute of each script tag and extracts the URL.
     - Compares the hostname of the extracted URL with the current hostname.
     - If the hostname differs and is not already present in the list of hijacking threats, it is added to the list.
@@ -44,10 +44,16 @@ The Green Cool Fox plugin enhances your browsing experience by providing essenti
     - Sends a message to the active tab using the browser API to request local storage data.
     - Receives the response, which contains the local storage data.
     - Determines the length of the local storage data array.
-    - If local storage data is found: Iterates through each item in the local storage data array.; Creates a list item (<li>) element for each item.; Sets the content of the list item with the data item.; Appends the list item to the local storage list in the user interface.
-    - If no local storage data is found: Creates a list item (<li>) element with a message indicating no local storage is detected.; Appends the list item to the local storage list in the user interface.
+    - If local storage data is found: 
+        - Iterates through each item in the local storage data array; 
+        - Creates a list item (`<li>`) element for each item; 
+        - Sets the content of the list item with the data item; 
+        - Appends the list item to the local storage list in the user interface.
+    - If no local storage data is found: 
+        - Creates a list item (`<li>`) element with a message indicating no local storage is detected; 
+        - Appends the list item to the local storage list in the user interface.
 
-4. **Cookies and Supercookies**
+4. **Cookies**
     - Retrieves the active tab from the browser.
     - Extracts the domain from the URL of the active tab.
     - Initializes a counter variable to track the number of cookies.
@@ -55,9 +61,15 @@ The Green Cool Fox plugin enhances your browsing experience by providing essenti
     - Receives the cookie data in the form of an array.
     - Determines the number of cookies by checking the length of the array.
     - Retrieves the HTML elements required for displaying the cookie information.
-    - If cookies are found: Creates a text node with the count of detected cookies.; Appends the text node to the "Cookies Quantity" heading element in the user interface.; Iterates through each cookie in the array.; Creates a list item (<li>) element for each cookie.; Sets the content of the list item to display the cookie name and type (session or navigation).; Appends the list item to either the internal or external cookie list based on the cookie domain.
-    - If no cookies are found: Creates a text node indicating that no cookies are detected.; Appends the text node to the "Cookies Quantity" heading element in the user interface.
-
+    - If cookies are found: 
+        - Creates a text node with the count of detected cookies; 
+        - Appends the text node to the "Cookies Quantity" heading element in the user interface; 
+        - Iterates through each cookie in the array.; Creates a list item (`<li>`) element for each cookie; 
+        - Sets the content of the list item to display the cookie name and type (session or navigation); 
+        - Appends the list item to either the internal or external cookie list based on the cookie domain.
+    - If no cookies are found: 
+        - Creates a text node indicating that no cookies are detected; 
+        - Appends the text node to the "Cookies Quantity" heading element in the user interface.
 
 ## License
 
