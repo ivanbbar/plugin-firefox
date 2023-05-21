@@ -13,12 +13,12 @@ const fetchAndDisplayThirdPartyDomains = async (tabs) => {
   
     if (numberOfDomains > 0) {
       let content = document.createTextNode(
-        "There are " + numberOfDomains + " third-party domains on this page"
+        "There are " + numberOfDomains + " third-party domains detected"
       );
       thirdPartyDomainsCountElement.appendChild(content);
     } else {
       let content = document.createTextNode(
-        "There are no third-party domains on this page"
+        "No third-party domains detected"
       );
       thirdPartyDomainsCountElement.appendChild(content);
     }

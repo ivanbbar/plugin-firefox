@@ -17,7 +17,7 @@ const fetchAndDisplayLocalStorage = async (tabs) => {
       }
     } else {
       let li = document.createElement("li");
-      let content = document.createTextNode("There is no local storage on this page");
+      let content = document.createTextNode("No local storage detected");
       li.appendChild(content);
       localStorageList.appendChild(li);
     }

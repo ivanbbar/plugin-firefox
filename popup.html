@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" />
     <link rel="stylesheet" href="popup.css" />
     <style>
       html,
@@ -10,6 +11,7 @@
         max-width: 100%;
         background-color: #4c9a2a; /* Green background */
         color: white;
+        font-family: 'Montserrat', sans-serif; /* Add Montserrat font */
       }
 
       .header {
@@ -66,10 +68,13 @@
     <div class="container">
       <details>
         <summary id="cookies-summary">Cookies details</summary>
+        <div class="cookies-div">
+          <h3 id="cookies-qtd"></h3>
+        </div>
         <h3>External Cookies:</h3>
-        <ul id="external-cookie-list"></ul>
+        <ul id="ext-cookie-list"></ul>
         <h3>Internal Cookies</h3>
-        <ul id="internal-cookie-list"></ul>
+        <ul id="int-cookie-list"></ul>
       </details>
 
       <details>
@@ -80,21 +85,19 @@
 
       <details>
         <summary id="third-party-domains-details">Third Party domains:</summary>
-        <h3>Third Party Domains:</h3>
         <h3 id="third-party-domains-qtd"></h3>
         <ul id="third-party-domains-list"></ul>
       </details>
 
       <!-- Hijacking Threats -->
       <details>
-        <summary id="Hijacking-threats-details">Hijaking Threats:</summary>
-        <h3>Hijacking Threats:</h3>
+        <summary id="Hijacking-threats-details">Hijacking Threats:</summary>
         <ul id="hijacking-threats-list"></ul>
       </details>
     </div>
-
+    
     <script src="detectHijacking.js"></script>
-    <script src="cookies.js"></script>
+    <script src="fetchAndDisplayCookies.js"></script>
     <script src="localStorage.js"></script>
     <script src="thirdPartyDomains.js"></script>
   </body>
