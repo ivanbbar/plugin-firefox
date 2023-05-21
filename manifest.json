@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+  "name": "greencoolfox",
+  "version": "1.0",
+  "description": "The ultimate protection companion for Firefox",
+  "icons": {
+    "16": "greencoolfox.png",
+    "32": "greencoolfox.png",
+    "64": "greencoolfox.png"
+  },
+  "permissions": [
+    "cookies",
+    "<all_urls>",
+    "tabs",
+    "storage"
+  ],
+  "browser_action": {
+    "default_icon": {
+      "16": "greencoolfox.png",
+      "32": "greencoolfox.png",
+      "64": "greencoolfox.png"
+    },
+    "default_title": "Green Cool Fox",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["popup.js"]
+    }
+  ]
+}

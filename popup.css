@@ -1,0 +1,39 @@
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  background-color: #4c9a2a; /* Green background */
+  color: white;
+}
+
+.container {
+  padding: 1rem;
+  background-color: #003d00; /* Dark green container background */
+}
+
+details {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  color: #f0f0f0;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+summary:hover {
+  color: #c7ffc3; /* Light green text on hover */
+  cursor: pointer;
+}
+
+h3 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #c7ffc3; /* Light green headings */
+}
+
+li {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  font-size: 1rem;
+  list-style: decimal;
+  color: #c7ffc3; /* Light green list item text */
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="popup.css" />
+    <style>
+      html,
+      body {
+        width: 100%;
+        max-width: 100%;
+        background-color: #4c9a2a; /* Green background */
+        color: white;
+      }
+
+      .header {
+        background-color: white;
+        padding: 1rem;
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+
+      .logo {
+        max-width: 200px; /* Adjust the size of the logo */
+        margin-bottom: 1rem; /* Add spacing below the logo */
+      }
+
+      .container {
+        padding: 1rem;
+        background-color: #003d00; /* Dark green container background */
+      }
+
+      details {
+        margin-bottom: 1rem;
+        padding: 1rem;
+        color: #f0f0f0;
+        font-weight: bold;
+        font-size: 24px;
+      }
+
+      summary:hover {
+        color: #c7ffc3; /* Light green text on hover */
+        cursor: pointer;
+      }
+
+      h3 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #c7ffc3; /* Light green headings */
+      }
+
+      li {
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+        font-size: 1rem;
+        list-style: decimal;
+        color: #c7ffc3; /* Light green list item text */
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="header">
+      <img src="greencoolfox.png" alt="GreenCoolFox Logo" class="logo" />
+    </div>
+
+    <div class="container">
+      <details>
+        <summary id="cookies-summary">Cookies details</summary>
+        <h3>External Cookies:</h3>
+        <ul id="external-cookie-list"></ul>
+        <h3>Internal Cookies</h3>
+        <ul id="internal-cookie-list"></ul>
+      </details>
+
+      <details>
+        <summary id="local-storage-summary">Local Storage details:</summary>
+        <h3>All data in local storage:</h3>
+        <ul id="local-storage-list"></ul>
+      </details>
+
+      <details>
+        <summary id="third-party-domains-details">Third Party domains:</summary>
+        <h3>Third Party Domains:</h3>
+        <h3 id="third-party-domains-qtd"></h3>
+        <ul id="third-party-domains-list"></ul>
+      </details>
+
+      <!-- Hijacking Threats -->
+      <details>
+        <summary id="Hijacking-threats-details">Hijaking Threats:</summary>
+        <h3>Hijacking Threats:</h3>
+        <ul id="hijacking-threats-list"></ul>
+      </details>
+    </div>
+
+    <script src="detectHijacking.js"></script>
+    <script src="cookies.js"></script>
+    <script src="localStorage.js"></script>
+    <script src="thirdPartyDomains.js"></script>
+  </body>
+</html>
